@@ -59,7 +59,7 @@ To use markovipy in a project::
     'Silvero With caressing hands, at Limoges Who walked all night in the field overhead; Rocks, moss, stonecrop, iron, merds.'
     >>> obj.generate_sentence()
     "Gives too soon Into weak hands, what's thought can be dispensed with Till the refusal propagates a fear."
- 	>>>
+
 
 * Free software: GNU General Public License v3
 * Documentation: https://markovipy.readthedocs.io.
@@ -68,6 +68,7 @@ To use markovipy in a project::
 Features
 --------
 
-* TODO
+* More tests to be added. As of now, some minimal tests have been written. Contributions more than welcome.
+* Create a web-interface with some fancy buttons/UI which would give you random quotes.
 
 

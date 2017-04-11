@@ -19,4 +19,4 @@ To use markovipy in a project::
     >>> obj.generate_sentence()
     "Gives too soon Into weak hands, what's thought can be dispensed with Till the refusal propagates a fear."
  	>>>
-    
+
