@@ -1,5 +1,5 @@
 # Byte-compiled / optimized / DLL files
-
+travis_pypi_setup.py
 .idea/*
 
 __pycache__/
