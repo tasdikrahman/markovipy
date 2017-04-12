@@ -27,11 +27,13 @@ def fix_caps(word):
 
 
 def get_word_list(file):
-    """Used to get the words inside the corpus file and generate a list of words by parsing it
+    """Used to get the words inside the corpus file and generate a list of
+    words by parsing it
 
     Something like = ["once", "upon", "a", ...]
 
-    Check the regex on https://regex101.com/ with any file inside the corpus/ dir
+    Check the regex on https://regex101.com/ with any file inside the
+    corpus/ dir
 
     \w matches any word character (equal to [a-zA-Z0-9_])
     ' matches the character ' literally (case sensitive)
@@ -43,7 +45,8 @@ def get_word_list(file):
     """
     try:
         with open(file, 'r') as f:
-            words_list = [fix_caps(w) for w in re.findall(r"[\w']+|[.,!?;]", f.read())]
+            words_list = \
+                [fix_caps(w) for w in re.findall(r"[\w']+|[.,!?;]", f.read())]
         return words_list
     except OSError:
         return "Did you pass a valid file name/path?"

@@ -33,8 +33,5 @@ class TestFixCaps:
 class TestWordList:
     """Checks whether my regex would be returning a list of words or not"""
     def test_utils_check_list_len(self):
-        assert (
-            len(get_word_list(
-                os.path.join(ROOT_DIR,
-                             "corpus/shakespeare/hamlet_utf8.txt"))
-            ) > 0)
+        assert (len(get_word_list(os.path.join(ROOT_DIR,
+                                  "corpus/shakespeare/hamlet_utf8.txt"))) > 0)

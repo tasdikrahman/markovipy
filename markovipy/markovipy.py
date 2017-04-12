@@ -12,10 +12,12 @@ from markovipy.constants import PUNCTUATIONS
 class MarkoviPy:
     def __init__(self, filename="", markov_length=2):
         """
-        starting_word: keeps track of the words from which sentences would be starting out.
+        starting_word: keeps track of the words from which sentences would be
+        starting out.
 
         TODO:
-        - instead of storing final_mapping and middle_mapping on memory, put them on a tiny DB(Sqlite comes to my mind)
+        - instead of storing final_mapping and middle_mapping on memory, put
+          them on a tiny DB(Sqlite comes to my mind)
 
         :type markov_length: <int> defaults to 2
         :type filename: <str> defaults to an empty string
@@ -28,11 +30,13 @@ class MarkoviPy:
         if os.path.exists(filename):
             self.filename = filename
         else:
-            raise FileNotFoundError("Please enter a valid file name for corpus")
+            raise FileNotFoundError(
+                "Please enter a valid file name for corpus")
 
     def _normalise_mapping(self):
         """
-        creates the self.final_mapping with the final probabilities in similar structure
+        creates the self.final_mapping with the final probabilities in
+        similar structure
          {
          ...
          ('with',): {'Till': 0.2,
@@ -48,22 +52,27 @@ class MarkoviPy:
         """
         for word_tuple, probable_word in self.middle_mapping.items():
             total = sum(probable_word.values())
-            self.final_mapping[word_tuple] = dict([(k, v / total) for k, v in probable_word.items()])
+            self.final_mapping[word_tuple] = \
+                dict([(k, v / total) for k, v in probable_word.items()])
 
     def _build_middle_mapping(self, word_history, next_word):
-        """Adds next_word to the list of possible next words after the sequence presented in word_history.
+        """Adds next_word to the list of possible next words after the
+        sequence presented in word_history.
 
-        maps the occurrence of the words after one another in a <dict> called 'middle_mapping'. This would just be a
-        <dict> which would contain a
-        - <tuple> as the key, inside the <tuple> you would be having the sequence of the words one after the another
+        maps the occurrence of the words after one another in a <dict> called
+        'middle_mapping'. This would just be a <dict> which would contain a
+        - <tuple> as the key, inside the <tuple> you would be having the
+        sequence of the words one after the another
         - and the value would be <dict>
 
-        eg: word_history = ["it", "rained", "on"] and next_word = "a", then it will create a mapping where for the
-            sequences ["it", "rained", "on"], ["it", "rained"], ["rained", "on"] and ["on"]. The next word for them
-            would be "a"
+        eg: word_history = ["it", "rained", "on"] and next_word = "a", then
+            it will create a mapping where for the sequences
+            ["it", "rained", "on"], ["it", "rained"], ["rained", "on"] and
+            ["on"]. The next word for them would be "a"
 
         Something like this
-        self.middle_mapping -> {('Once', 'upon'): {'a': 1.0}, ('upon',): {'a': 1.0}}
+        self.middle_mapping -> {('Once', 'upon'): {'a': 1.0},
+                                ('upon',): {'a': 1.0}}
 
         Finally,method builds something like this inside self.middle_mapping
         {
@@ -97,8 +106,9 @@ class MarkoviPy:
             word_history = word_history[1:]
 
     def _iterate_through_word_list(self):
-        """Picks out pair of words with accordance to the length of the markov chain to be created and passes the chain
-        as a list and the next word to self._build_middle_mapping()
+        """Picks out pair of words with accordance to the length of the markov
+        chain to be created and passes the chain as a list and the next word to
+        self._build_middle_mapping()
         :return:
         """
         self.words_list = get_word_list(self.filename)
@@ -107,9 +117,11 @@ class MarkoviPy:
             if i < self.markov_length:
                 word_history = self.words_list[:i + 1]
             elif i >= self.markov_length:
-                word_history = self.words_list[i - self.markov_length + 1:i + 1]
+                word_history = \
+                            self.words_list[i - self.markov_length + 1:i + 1]
             next_word = self.words_list[i + 1]
-            # if the last word was a period, add the next word to self.starting_word
+            # if the last word was a period, add the next word to
+            # self.starting_word
             if word_history[-1] == "." and next_word not in list(PUNCTUATIONS):
                 self.starting_words.append(next_word)
 
