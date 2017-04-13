@@ -20,7 +20,7 @@ test_requirements = [
 
 setup(
     name='markovipy',
-    version='0.1.0',
+    version='0.1.1',
     description="Sentence generation using Markov Chains",
     long_description=readme + '\n\n' + history,
     author="Tasdik Rahman",

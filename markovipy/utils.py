@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import re
+import codecs
 
 
 def fix_caps(word):
@@ -44,7 +45,9 @@ def get_word_list(file):
     :return: <list>
     """
     try:
-        with open(file, 'r') as f:
+        # fixes UnicodeDecodeError while reading files instead of using the
+        # normal open()
+        with codecs.open(file, 'r', encoding='utf-8') as f:
             words_list = \
                 [fix_caps(w) for w in re.findall(r"[\w']+|[.,!?;]", f.read())]
         return words_list
