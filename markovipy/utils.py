@@ -53,13 +53,3 @@ def get_word_list(file):
         return words_list
     except OSError:
         return "Did you pass a valid file name/path?"
-
-
-def list_to_tuple(list_obj):
-    """As lists are not hashable, converting the list explicitly to a tuple
-
-    :param list_obj: <list> object to be hashed
-    :type list_obj: <list>
-    :return: <tuple>
-    """
-    return tuple(list_obj)

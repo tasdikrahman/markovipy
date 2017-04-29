@@ -3,9 +3,9 @@
 
 import os
 import random
+import collections
 
 from markovipy.utils import get_word_list
-from markovipy.utils import list_to_tuple
 from markovipy.constants import PUNCTUATIONS
 
 
@@ -23,15 +23,15 @@ class MarkoviPy:
         :type filename: <str> defaults to an empty string
         """
         self.starting_words = []
-        self.middle_mapping = {}
+        self.middle_mapping = collections.defaultdict(collections.Counter)
         self.final_mapping = {}
-        self.words_list = []
         self.markov_length = markov_length
         if os.path.exists(filename):
             self.filename = filename
         else:
             raise FileNotFoundError(
                 "Please enter a valid file name for corpus")
+        self.words_list = get_word_list(self.filename)
 
     def _normalise_mapping(self):
         """
@@ -94,15 +94,8 @@ class MarkoviPy:
         :return:
         """
         while len(word_history) > 0:
-            key = list_to_tuple(word_history)
-            if key not in self.middle_mapping:
-                self.middle_mapping[key] = {}
-                self.middle_mapping[key][next_word] = 1.0
-            else:
-                if next_word in self.middle_mapping[key]:
-                    self.middle_mapping[key][next_word] += 1
-                else:
-                    self.middle_mapping[key][next_word] = 1.0
+            key = tuple(word_history)
+            self.middle_mapping[key][next_word] += 1.0
             word_history = word_history[1:]
 
     def _iterate_through_word_list(self):
@@ -111,7 +104,6 @@ class MarkoviPy:
         self._build_middle_mapping()
         :return:
         """
-        self.words_list = get_word_list(self.filename)
         self.starting_words.append(self.words_list[0])
         for i in range(1, len(self.words_list) - 1):
             if i < self.markov_length:
@@ -138,10 +130,10 @@ class MarkoviPy:
         next_word = ""
         index = random.random()
         # Shorten prevList until it's in mapping
-        while list_to_tuple(prev_list) not in self.final_mapping:
+        while tuple(prev_list) not in self.final_mapping:
             prev_list.pop(0)
         # Get a random word from the mapping, given prevList
-        for k, v in self.final_mapping[list_to_tuple(prev_list)].items():
+        for k, v in self.final_mapping[tuple(prev_list)].items():
             probabilty_sum += v
             if probabilty_sum >= index and next_word == "":
                 next_word = k
