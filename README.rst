@@ -18,7 +18,9 @@ markovipy
      :alt: Updates
 
 
-Sentence generation using Markov Chains
+|logo|
+
+Sentence generation using Markov Chains. I `wrote a blog post <http://tasdikrahman.me/2017/05/06/Making-of-trumporate-using-markovipy-generating-sentences-using-markov-chains-part-1/>`__ explaining the motivation and what is there behind the scenes if you are interested
 
 ============
 Installation
@@ -79,3 +81,10 @@ Features
 * Create a web-interface with some fancy buttons/UI which would give you random quotes.
 
 
+Links
+-----
+
+* `Blog post <http://tasdikrahman.me/2017/05/06/Making-of-trumporate-using-markovipy-generating-sentences-using-markov-chains-part-1/>`__
+
+.. |logo| image:: http://i.imgur.com/cTY2kTK.png
+   :target: https://markovipy.readthedocs.io
