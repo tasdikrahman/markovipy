@@ -20,7 +20,9 @@ markovipy
 
 |logo|
 
-Sentence generation using Markov Chains. I `wrote a blog post <http://tasdikrahman.me/2017/05/06/Making-of-trumporate-using-markovipy-generating-sentences-using-markov-chains-part-1/>`__ explaining the motivation and what is there behind the scenes if you are interested
+She tries striking conversations with you with her cohesive sentences after you have given her fill of text to her. And no she won’t complain about how big your corpus is. Also, don’t ask her if she can pass the turing test. She might not talk to you again.
+
+I `wrote a blog post <http://tasdikrahman.me/2017/05/06/Making-of-trumporate-using-markovipy-generating-sentences-using-markov-chains-part-1/>`__ explaining the motivation and what is there behind the scenes if you are interested
 
 ============
 Installation
