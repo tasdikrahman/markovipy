@@ -2,10 +2,17 @@
 History
 =======
 
-Current
--------
+0.3.0(2017-05-30)
+-----------------
 
 * exposed the ``Markovipy`` class in the ``markovipy`` module.
+  API changed from 
+
+    from markovipy.markovipy import MarkoviPy
+
+to 
+
+    from markovipy import MarkoviPy
 
 0.2.0 (2017-04-29)
 ------------------
