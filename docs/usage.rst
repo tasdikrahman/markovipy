@@ -4,7 +4,7 @@ Usage
 
 To use markovipy in a project::
 
-    >>> from markovipy.markovipy import MarkoviPy
+    >>> from markovipy import MarkoviPy
     >>> # create MarkoviPy object
     >>> obj = MarkoviPy("/Users/tasrahma/development/projects/markovipy/corpus/ts_eliot/Gerontion_utf8.txt", 3)
     >>> # arguments passes is the initial corpus file and the markov chain length(defaults to 2 if nothing passed)
@@ -18,5 +18,5 @@ To use markovipy in a project::
     'Silvero With caressing hands, at Limoges Who walked all night in the field overhead; Rocks, moss, stonecrop, iron, merds.'
     >>> obj.generate_sentence()
     "Gives too soon Into weak hands, what's thought can be dispensed with Till the refusal propagates a fear."
- 	>>>
+    >>>
 

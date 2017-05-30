@@ -2,6 +2,11 @@
 History
 =======
 
+Current
+-------
+
+* exposed the ``Markovipy`` class in the ``markovipy`` module.
+
 0.2.0 (2017-04-29)
 ------------------
 

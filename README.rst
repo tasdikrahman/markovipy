@@ -34,7 +34,7 @@ To install markovipy, run this command in your terminal:
 
     $ pip install markovipy
 
-This is the preferred method to install markovipy, as it will always install the most recent stable release. 
+This is the preferred method to install markovipy, as it will always install the most recent stable release.
 
 If you don't have `pip`_ installed, this `Python installation guide`_ can guide
 you through the process.
@@ -49,7 +49,7 @@ Usage
 
 To use markovipy in a project::
 
-    >>> from markovipy.markovipy import MarkoviPy
+    >>> from markovipy import MarkoviPy
     >>>
     >>> # create MarkoviPy object
     >>> obj = MarkoviPy("/Users/tasrahma/development/projects/markovipy/corpus/ts_eliot/Gerontion_utf8.txt", 3)

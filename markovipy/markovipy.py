@@ -141,8 +141,11 @@ class MarkoviPy:
         return next_word
 
     def generate_sentence(self):
-        """Returns a generic sentence using markov chains
-        :return: <str> Generated sentence
+        """
+        Returns a generic sentence using markov chains
+
+        :return: Generated sentence
+        :rtype: str
         """
         self._iterate_through_word_list()
         # Start with a random "starting word"
