@@ -6,15 +6,15 @@ markovipy
 .. image:: https://img.shields.io/pypi/v/markovipy.svg
         :target: https://pypi.python.org/pypi/markovipy
 
-.. image:: https://img.shields.io/travis/prodicus/markovipy.svg
-        :target: https://travis-ci.org/prodicus/markovipy
+.. image:: https://img.shields.io/travis/tasdikrahman/markovipy.svg
+        :target: https://travis-ci.org/tasdikrahman/markovipy
 
 .. image:: https://readthedocs.org/projects/markovipy/badge/?version=latest
         :target: https://markovipy.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
-.. image:: https://pyup.io/repos/github/prodicus/markovipy/shield.svg
-     :target: https://pyup.io/repos/github/prodicus/markovipy/
+.. image:: https://pyup.io/repos/github/tasdikrahman/markovipy/shield.svg
+     :target: https://pyup.io/repos/github/tasdikrahman/markovipy/
      :alt: Updates
 
 
@@ -30,7 +30,7 @@ Demo
 ====
 
 .. image:: http://tasdikrahman.me/content/images/2017/05/markovipy.png
-     :target: https://github.com/prodicus/markovipy
+     :target: https://github.com/tasdikrahman/markovipy
      :alt: Demo
 
 ============

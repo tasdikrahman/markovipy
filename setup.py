@@ -25,7 +25,7 @@ setup(
     long_description=readme + '\n\n' + history,
     author="Tasdik Rahman",
     author_email='prodicus@outlook.com',
-    url='https://github.com/prodicus/markovipy',
+    url='https://github.com/tasdikrahman/markovipy',
     packages=[
         'markovipy',
     ],

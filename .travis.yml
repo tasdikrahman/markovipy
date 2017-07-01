@@ -20,10 +20,10 @@ script: tox -e ${TOXENV}
 # deploy:
 #   provider: pypi
 #   distributions: sdist bdist_wheel
-#   user: prodicus
+#   user: tasdikrahman
 #   password:
 #     secure: PLEASE_REPLACE_ME
 #   on:
 #     tags: true
-#     repo: prodicus/markovipy
+#     repo: tasdikrahman/markovipy
 #     condition: $TOXENV == py27

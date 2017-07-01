@@ -32,13 +32,13 @@ You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/prodicus/markovipy
+    $ git clone git://github.com/tasdikrahman/markovipy
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl  -OL https://github.com/prodicus/markovipy/tarball/master
+    $ curl  -OL https://github.com/tasdikrahman/markovipy/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
@@ -47,5 +47,5 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/prodicus/markovipy
-.. _tarball: https://github.com/prodicus/markovipy/tarball/master
+.. _Github repo: https://github.com/tasdikrahman/markovipy
+.. _tarball: https://github.com/tasdikrahman/markovipy/tarball/master
